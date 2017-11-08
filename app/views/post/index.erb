@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-xs-12 col-sm-12">
+            <h1>Hi, i'm jihyuk</h1>
+        
+            <form action="/post/create">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title" name="title">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Content</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter text" name="content">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="col-md-6 col-xs-12 col-sm-12">
+            <% @post.each do |post| %>
+                <div class="card w-75">
+                      <div class="card-body">
+                        <h4 class="card-title"><%=post.title%></h4>
+                        <p class="card-text"><%=post.content%></p>
+                        <a href="/post/show/<%= post.id %>" class="btn btn-primary">[Show]</a>
+                        <a href="/post/update/<%= post.id %>" class="btn btn-primary">[Edit]</a>
+                        <a href="/post/destroy/<%= post.id %>" class="btn btn-primary">[X]</a>
+                      </div>
+                </div>
+            <%end%>
+        </div>
+
+
+    </div>
+</div>

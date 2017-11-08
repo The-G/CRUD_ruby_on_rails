@@ -1,0 +1,8 @@
+<h1>Update</h1>
+
+<form action="/post/update_action">
+    title : <input type="text" name="title" value="<%=@post.title%>"> <br>
+    content : <input type="text" name="content" value="<%=@post.content%>"> <br>
+    <input type="hidden" name="id" value="<%=@post.id%>">
+    <input type="submit" value="제출">
+</form>
