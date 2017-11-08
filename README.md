@@ -272,8 +272,7 @@ end
 default argument 가능하지 당근
 http://ruby-doc.org/
 
-## ruby blocks
-- 코드 모음
+- ruby blocks(코드 모음)
 
 def hack
   puts "Hack "
